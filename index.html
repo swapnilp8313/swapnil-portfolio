@@ -515,4 +515,548 @@
   <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
+=======
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap - Frontend Developer &amp; UI/UX Designer</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full smooth-scroll">
+  <div id="app" class="w-full h-full overflow-auto"><!-- Hero Section -->
+   <section id="hero" class="w-full min-h-screen flex items-center px-6 md:px-12 lg:px-24 py-20">
+    <div class="max-w-7xl mx-auto w-full">
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><!-- Left Content -->
+      <div class="space-y-6">
+       <h1 id="hero-greeting" class="text-5xl md:text-6xl lg:text-7xl font-bold">Hi, I'm <span id="hero-name-text">Swap</span> 👋</h1>
+       <h2 id="hero-title-text" class="text-3xl md:text-4xl font-semibold">Frontend Web Developer &amp; UI/UX Designer</h2>
+       <p id="hero-description-text" class="text-lg md:text-xl leading-relaxed max-w-xl">I build beautiful, modern websites and craft intuitive user experiences that bring ideas to life.</p>
+       <div class="flex flex-wrap gap-4 pt-4"><a href="#projects" class="btn-primary px-8 py-4 rounded-full font-semibold text-lg shadow-lg"> View Projects </a> <a href="#contact" class="px-8 py-4 rounded-full font-semibold text-lg border-2"> Contact Me </a>
+       </div>
+      </div><!-- Right Content - Illustration -->
+      <div class="flex justify-center lg:justify-end">
+       <div class="relative w-full max-w-md aspect-square flex items-center justify-center rounded-3xl p-8"><!-- Developer Illustration SVG -->
+        <svg viewbox="0 0 400 400" class="w-full h-full"><!-- Desk --> <rect x="50" y="280" width="300" height="15" rx="7" class="desk-fill" /> <!-- Monitor --> <rect x="120" y="160" width="160" height="120" rx="8" class="monitor-fill" /> <rect x="130" y="170" width="140" height="90" class="screen-fill" /> <!-- Code Lines --> <line x1="140" y1="185" x2="180" y2="185" stroke-width="3" class="code-stroke" /> <line x1="140" y1="200" x2="220" y2="200" stroke-width="3" class="code-stroke" /> <line x1="140" y1="215" x2="190" y2="215" stroke-width="3" class="code-stroke" /> <line x1="140" y1="230" x2="240" y2="230" stroke-width="3" class="code-stroke" /> <line x1="140" y1="245" x2="200" y2="245" stroke-width="3" class="code-stroke" /> <!-- Monitor Stand --> <rect x="185" y="280" width="30" height="20" class="desk-fill" /> <!-- Person Head --> <circle cx="200" cy="130" r="35" class="head-fill" /> <!-- Person Body --> <ellipse cx="200" cy="200" rx="45" ry="55" class="body-fill" /> <!-- Keyboard --> <rect x="140" y="300" width="120" height="35" rx="5" class="keyboard-fill" /> <rect x="150" y="310" width="100" height="3" class="key-fill" /> <rect x="150" y="320" width="100" height="3" class="key-fill" /> <!-- Mouse --> <ellipse cx="290" cy="315" rx="12" ry="18" class="mouse-fill" /> <!-- Coffee Cup --> <rect x="75" y="295" width="30" height="35" rx="3" class="cup-fill" /> <ellipse cx="90" cy="295" rx="15" ry="5" class="cup-fill" /> <path d="M 105 305 Q 115 305 115 315" stroke-width="3" fill="none" class="handle-stroke" />
+        </svg>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="w-full px-6 md:px-12 lg:px-24 py-20">
+    <div class="max-w-7xl mx-auto">
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><!-- Left - Profile Image -->
+      <div class="flex justify-center lg:justify-start">
+       <div class="w-80 h-80 rounded-3xl flex items-center justify-center shadow-xl about-card-bg">
+        <svg viewbox="0 0 200 200" class="w-64 h-64"><circle cx="100" cy="80" r="40" class="avatar-fill" /> <path d="M 60 160 Q 100 140 140 160 L 140 200 L 60 200 Z" class="avatar-body-fill" /> <circle cx="85" cy="75" r="5" fill="#2d3748" /> <circle cx="115" cy="75" r="5" fill="#2d3748" /> <path d="M 85 90 Q 100 95 115 90" stroke="#2d3748" stroke-width="2" fill="none" />
+        </svg>
+       </div>
+      </div><!-- Right - About Content -->
+      <div class="space-y-6">
+       <h2 class="text-4xl md:text-5xl font-bold about-heading">About Me</h2>
+       <p id="about-bio-text" class="text-lg md:text-xl leading-relaxed about-text">With over 3 years of experience in frontend development and UI/UX design, I specialize in creating clean, modern, and user-friendly digital experiences. I'm passionate about writing clean code and designing interfaces that users love.</p>
+       <div class="grid grid-cols-2 gap-6 pt-4">
+        <div>
+         <h3 class="text-3xl font-bold stat-number">3+</h3>
+         <p class="stat-label">Years Experience</p>
+        </div>
+        <div>
+         <h3 class="text-3xl font-bold stat-number">50+</h3>
+         <p class="stat-label">Projects Completed</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Skills Section -->
+   <section id="skills" class="w-full px-6 md:px-12 lg:px-24 py-20 skills-bg">
+    <div class="max-w-7xl mx-auto">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 skills-heading">Skills &amp; Technologies</h2>
+     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"><!-- HTML -->
+      <div class="skill-card p-6 rounded-2xl shadow-lg text-center space-y-4 skill-card-bg">
+       <svg class="w-16 h-16 mx-auto" viewbox="0 0 24 24" fill="none"><path d="M12 18L4 20V4L12 2L20 4V20L12 18Z" class="skill-icon-fill" /> <path d="M8 8H16M8 12H16M8 16H13" stroke="blue" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <h3 class="font-semibold text-lg skill-text">HTML</h3>
+      </div><!-- CSS -->
+      <div class="skill-card p-6 rounded-2xl shadow-lg text-center space-y-4 skill-card-bg">
+       <svg class="w-16 h-16 mx-auto" viewbox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" class="skill-icon-fill" /> <path d="M8 10H16M10 8V16M14 8V16" stroke="blue" stroke-width="2" />
+       </svg>
+       <h3 class="font-semibold text-lg skill-text">CSS</h3>
+      </div><!-- JavaScript -->
+      <div class="skill-card p-6 rounded-2xl shadow-lg text-center space-y-4 skill-card-bg">
+       <svg class="w-16 h-16 mx-auto" viewbox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" class="skill-icon-fill" /> <text x="12" y="16" text-anchor="middle" fill="blue" font-size="10" font-weight="bold">
+         JS
+        </text>
+       </svg>
+       <h3 class="font-semibold text-lg skill-text">JavaScript</h3>
+      </div><!-- React -->
+      <div class="skill-card p-6 rounded-2xl shadow-lg text-center space-y-4 skill-card-bg">
+       <svg class="w-16 h-16 mx-auto" viewbox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" class="skill-icon-fill"  fill="blue"/> <ellipse cx="12" cy="12" rx="8" ry="3" fill="blue" stroke-width="2" class="skill-icon-stroke" /> <ellipse fill="blue" cx="12" cy="12" rx="3" ry="8" stroke-width="2" class="skill-icon-stroke" />
+       </svg>
+       <h3 class="font-semibold text-lg skill-text">React</h3>
+      </div><!-- UI/UX Design -->
+      <div class="skill-card p-6 rounded-2xl shadow-lg text-center space-y-4 skill-card-bg">
+       <svg class="w-16 h-16 mx-auto" viewbox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1" class="skill-icon-fill" fill="blue"/> <rect x="13" y="4" width="7" height="7" rx="1" class="skill-icon-fill" fill="blue"/> <rect x="4" y="13" width="7" height="7" rx="1" class="skill-icon-fill" fill="blue"/> <rect x="13" y="13" width="7" height="7" rx="1" class="skill-icon-fill" fill="blue"/>
+       </svg>
+       <h3 class="font-semibold text-lg skill-text">UI/UX Design</h3>
+      </div>
+     </div>
+    </div>
+   </section><!-- Projects Section -->
+   <section id="projects" class="w-full px-6 md:px-12 lg:px-24 py-20">
+    <div class="max-w-7xl mx-auto">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 projects-heading">Featured Projects</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Project 1 -->
+      <div class="project-card rounded-2xl shadow-xl overflow-hidden project-card-bg">
+       <div class="h-48 flex items-center justify-center project-preview-bg">
+        <svg viewbox="0 0 200 150" class="w-full h-full p-4"><rect width="200" height="150" fill="#f0f4ff" /> <rect x="20" y="20" width="160" height="20" rx="4" fill="#6C63FF" /> <rect x="20" y="50" width="100" height="10" rx="2" fill="#cbd5e0" /> <rect x="20" y="70" width="120" height="10" rx="2" fill="#cbd5e0" /> <rect x="20" y="90" width="80" height="10" rx="2" fill="#cbd5e0" />
+        </svg>
+       </div>
+       <div class="p-6 space-y-3">
+        <h3 class="text-xl font-bold project-title">E-Commerce Platform</h3>
+        <p class="project-description">A modern online shopping experience with seamless checkout and product discovery.</p><a href="#" target="_blank" rel="noopener noreferrer" class="inline-block project-btn px-6 py-2 rounded-full font-semibold mt-2"> View Live → </a>
+       </div>
+      </div><!-- Project 2 -->
+      <div class="project-card rounded-2xl shadow-xl overflow-hidden project-card-bg">
+       <div class="h-48 flex items-center justify-center project-preview-bg">
+        <svg viewbox="0 0 200 150" class="w-full h-full p-4"><rect width="200" height="150" fill="#fff5e6" /> <circle cx="100" cy="60" r="25" fill="#F4C430" /> <rect x="50" y="95" width="100" height="8" rx="4" fill="#cbd5e0" /> <rect x="60" y="110" width="80" height="8" rx="4" fill="#cbd5e0" />
+        </svg>
+       </div>
+       <div class="p-6 space-y-3">
+        <h3 class="text-xl font-bold project-title">Task Management App</h3>
+        <p class="project-description">Intuitive task tracker with real-time collaboration and progress monitoring.</p><a href="#" target="_blank" rel="noopener noreferrer" class="inline-block project-btn px-6 py-2 rounded-full font-semibold mt-2"> View Live → </a>
+       </div>
+      </div><!-- Project 3 -->
+      <div class="project-card rounded-2xl shadow-xl overflow-hidden project-card-bg">
+       <div class="h-48 flex items-center justify-center project-preview-bg">
+        <svg viewbox="0 0 200 150" class="w-full h-full p-4"><rect width="200" height="150" fill="#f0fff4" /> <rect x="30" y="30" width="50" height="90" rx="4" fill="#6C63FF" /> <rect x="90" y="50" width="50" height="70" rx="4" fill="#F4C430" /> <rect x="150" y="40" width="20" height="80" rx="4" fill="#cbd5e0" />
+        </svg>
+       </div>
+       <div class="p-6 space-y-3">
+        <h3 class="text-xl font-bold project-title">Analytics Dashboard</h3>
+        <p class="project-description">Data visualization platform with interactive charts and real-time insights.</p><a href="#" target="_blank" rel="noopener noreferrer" class="inline-block project-btn px-6 py-2 rounded-full font-semibold mt-2"> View Live → </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="w-full px-6 md:px-12 lg:px-24 py-20 services-bg">
+    <div class="max-w-7xl mx-auto">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 services-heading">Services</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Service 1 -->
+      <div class="service-card p-8 rounded-2xl shadow-lg text-center space-y-4 service-card-bg">
+       <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center service-icon-bg">
+        <svg class="w-8 h-8" viewbox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" class="service-icon-fill" /> <path d="M2 17L12 22L22 17M2 12L12 17L22 12" class="service-icon-fill" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold service-title">Website Design &amp; Development</h3>
+       <p class="service-description">Custom websites built with modern technologies</p>
+      </div><!-- Service 2 -->
+      <div class="service-card p-8 rounded-2xl shadow-lg text-center space-y-4 service-card-bg">
+       <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center service-icon-bg">
+        <svg class="w-8 h-8" viewbox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="18" rx="1" class="service-icon-fill" /> <rect x="14" y="3" width="7" height="18" rx="1" class="service-icon-fill" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold service-title">Responsive Web Design</h3>
+       <p class="service-description">Mobile-first designs that work on all devices</p>
+      </div><!-- Service 3 -->
+      <div class="service-card p-8 rounded-2xl shadow-lg text-center space-y-4 service-card-bg">
+       <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center service-icon-bg">
+        <svg class="w-8 h-8" viewbox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" class="service-icon-fill" /> <path d="M12 1V4M12 20V23M23 12H20M4 12H1M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke-width="2" class="service-icon-stroke" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold service-title">React Applications</h3>
+       <p class="service-description">Interactive web apps with React</p>
+      </div><!-- Service 4 -->
+      <div class="service-card p-8 rounded-2xl shadow-lg text-center space-y-4 service-card-bg">
+       <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center service-icon-bg">
+        <svg class="w-8 h-8" viewbox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 4C13.93 4 15.68 4.78 16.95 6.05L6.05 16.95C4.78 15.68 4 13.93 4 12C4 7.58 7.58 4 12 4Z" class="service-icon-fill" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold service-title">UI/UX Design</h3>
+       <p class="service-description">Beautiful interfaces with great user experience</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="w-full px-6 md:px-12 lg:px-24 py-20">
+    <div class="max-w-3xl mx-auto">
+     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 contact-heading">Get In Touch</h2>
+     <form id="contactForm" class="space-y-6 contact-form-bg p-8 md:p-12 rounded-3xl shadow-xl">
+      <div><label for="name" class="block text-sm font-semibold mb-2 form-label">Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none input-field" placeholder="Your name">
+      </div>
+      <div><label for="email" class="block text-sm font-semibold mb-2 form-label">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none input-field" placeholder="your.email@example.com">
+      </div>
+      <div><label for="message" class="block text-sm font-semibold mb-2 form-label">Message</label> <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none input-field resize-none" placeholder="Tell me about your project..."></textarea>
+      </div><button type="submit" class="w-full submit-btn py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all"> Let's Work Together </button>
+      <div id="formMessage" class="hidden text-center font-semibold"></div>
+     </form>
+    </div>
+   </section><!-- Footer -->
+   <footer class="w-full px-6 md:px-12 lg:px-24 py-12 footer-bg">
+    <div class="max-w-7xl mx-auto">
+     <div class="flex flex-col items-center space-y-6"><!-- Social Icons -->
+      <div class="flex gap-6"><a href="#" target="_blank" rel="noopener noreferrer" class="social-icon w-12 h-12 rounded-full flex items-center justify-center social-icon-bg">
+        <svg class="w-6 h-6" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" class="social-icon-fill" />
+        </svg></a> <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon w-12 h-12 rounded-full flex items-center justify-center social-icon-bg">
+        <svg class="w-6 h-6" viewbox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" class="social-icon-fill" />
+        </svg></a> <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon w-12 h-12 rounded-full flex items-center justify-center social-icon-bg">
+        <svg class="w-6 h-6" viewbox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" class="social-icon-fill" /> <circle cx="4" cy="4" r="2" class="social-icon-fill" />
+        </svg></a> <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon w-12 h-12 rounded-full flex items-center justify-center social-icon-bg">
+        <svg class="w-6 h-6" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" class="social-icon-fill" />
+        </svg></a>
+      </div><!-- Copyright -->
+      <p id="footer-copyright-text" class="footer-text">© 2024 Swap. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#ffffff",
+      surface_color: "#f7fafc",
+      text_color: "#1a202c",
+      primary_action: "#6C63FF",
+      secondary_action: "#F4C430",
+      font_family: "Inter",
+      font_size: 16,
+      hero_name: "Swap",
+      hero_title: "Frontend Web Developer & UI/UX Designer",
+      hero_description: "I build beautiful, modern websites and craft intuitive user experiences that bring ideas to life.",
+      about_bio: "With over 3 years of experience in frontend development and UI/UX design, I specialize in creating clean, modern, and user-friendly digital experiences. I'm passionate about writing clean code and designing interfaces that users love.",
+      footer_copyright: "© 2024 Swap. All rights reserved."
+    };
+
+    async function onConfigChange(config) {
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryAction = config.primary_action || defaultConfig.primary_action;
+      const secondaryAction = config.secondary_action || defaultConfig.secondary_action;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = 'Arial, sans-serif';
+
+      // Apply background colors
+      document.body.style.backgroundColor = backgroundColor;
+      document.getElementById('app').style.backgroundColor = backgroundColor;
+      document.getElementById('hero').style.backgroundColor = backgroundColor;
+      document.getElementById('about').style.backgroundColor = backgroundColor;
+      document.getElementById('projects').style.backgroundColor = backgroundColor;
+      document.getElementById('contact').style.backgroundColor = backgroundColor;
+
+      // Apply surface colors to sections
+      document.getElementById('skills').style.backgroundColor = surfaceColor;
+      document.getElementById('services').style.backgroundColor = surfaceColor;
+
+      // Apply text colors
+      document.body.style.color = textColor;
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, label, .about-text, .stat-label, .skill-text, .project-title, .project-description, .service-title, .service-description, .form-label, .footer-text');
+      headings.forEach(el => {
+        el.style.color = textColor;
+      });
+
+      // Apply primary action color
+      const primaryButtons = document.querySelectorAll('.btn-primary, .submit-btn');
+      primaryButtons.forEach(btn => {
+        btn.style.backgroundColor = primaryAction;
+        btn.style.color = '#ffffff';
+        btn.style.borderColor = primaryAction;
+      });
+
+      // Apply secondary action color
+      const secondaryButtons = document.querySelectorAll('a[href="#contact"]');
+      secondaryButtons.forEach(btn => {
+        btn.style.color = textColor;
+        btn.style.borderColor = textColor;
+        btn.style.backgroundColor = 'transparent';
+      });
+
+      // Project buttons
+      const projectButtons = document.querySelectorAll('.project-btn');
+      projectButtons.forEach(btn => {
+        btn.style.backgroundColor = primaryAction;
+        btn.style.color = '#ffffff';
+      });
+
+      // Apply colors to cards
+      const aboutCard = document.querySelector('.about-card-bg');
+      if (aboutCard) aboutCard.style.backgroundColor = surfaceColor;
+
+      const skillCards = document.querySelectorAll('.skill-card-bg');
+      skillCards.forEach(card => {
+        card.style.backgroundColor = '#ffffff';
+      });
+
+      const projectCards = document.querySelectorAll('.project-card-bg');
+      projectCards.forEach(card => {
+        card.style.backgroundColor = '#ffffff';
+      });
+
+      const serviceCards = document.querySelectorAll('.service-card-bg');
+      serviceCards.forEach(card => {
+        card.style.backgroundColor = '#ffffff';
+      });
+
+      // Contact form
+      const contactForm = document.querySelector('.contact-form-bg');
+      if (contactForm) contactForm.style.backgroundColor = '#ffffff';
+
+      const inputFields = document.querySelectorAll('.input-field');
+      inputFields.forEach(input => {
+        input.style.backgroundColor = '#ffffff';
+        input.style.borderColor = '#e2e8f0';
+        input.style.color = textColor;
+      });
+
+      // Footer
+      document.querySelector('footer').style.backgroundColor = surfaceColor;
+
+      // Social icons
+      const socialIcons = document.querySelectorAll('.social-icon-bg');
+      socialIcons.forEach(icon => {
+        icon.style.backgroundColor = primaryAction;
+      });
+
+      const socialIconFills = document.querySelectorAll('.social-icon-fill');
+      socialIconFills.forEach(fill => {
+        fill.style.fill = '#ffffff';
+      });
+
+      // SVG colors
+      document.querySelectorAll('.desk-fill, .monitor-fill, .keyboard-fill, .cup-fill, .avatar-body-fill').forEach(el => {
+        el.setAttribute('fill', surfaceColor);
+      });
+
+      document.querySelectorAll('.screen-fill').forEach(el => {
+        el.setAttribute('fill', '#1a202c');
+      });
+
+      document.querySelectorAll('.code-stroke').forEach(el => {
+        el.setAttribute('stroke', primaryAction);
+      });
+
+      document.querySelectorAll('.head-fill, .body-fill, .mouse-fill, .avatar-fill').forEach(el => {
+        el.setAttribute('fill', secondaryAction);
+      });
+
+      document.querySelectorAll('.handle-stroke').forEach(el => {
+        el.setAttribute('stroke', textColor);
+      });
+
+      document.querySelectorAll('.key-fill').forEach(el => {
+        el.setAttribute('fill', textColor);
+      });
+
+      document.querySelectorAll('.skill-icon-fill, .service-icon-fill').forEach(el => {
+        el.setAttribute('fill', primaryAction);
+      });
+
+      document.querySelectorAll('.skill-icon-stroke, .service-icon-stroke').forEach(el => {
+        el.setAttribute('stroke', primaryAction);
+      });
+
+      document.querySelectorAll('.stat-number').forEach(el => {
+        el.style.color = primaryAction;
+      });
+
+      document.querySelectorAll('.service-icon-bg').forEach(el => {
+        el.style.backgroundColor = surfaceColor;
+      });
+
+      document.querySelectorAll('.project-preview-bg').forEach(el => {
+        el.style.backgroundColor = surfaceColor;
+      });
+
+      // Apply font family
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+        el.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      });
+
+      // Apply font sizes
+      document.querySelector('#hero-greeting').style.fontSize = `${fontSize * 3.5}px`;
+      document.querySelector('#hero-title-text').style.fontSize = `${fontSize * 1.875}px`;
+      document.querySelector('#hero-description-text').style.fontSize = `${fontSize * 1.125}px`;
+      
+      document.querySelectorAll('h2').forEach(el => {
+        el.style.fontSize = `${fontSize * 2.5}px`;
+      });
+
+      document.querySelectorAll('.text-lg, .text-xl, p').forEach(el => {
+        el.style.fontSize = `${fontSize}px`;
+      });
+
+      document.querySelectorAll('.text-3xl').forEach(el => {
+        el.style.fontSize = `${fontSize * 1.875}px`;
+      });
+
+      document.querySelectorAll('h3').forEach(el => {
+        el.style.fontSize = `${fontSize * 1.25}px`;
+      });
+
+      document.querySelectorAll('button, .btn-primary, a').forEach(el => {
+        el.style.fontSize = `${fontSize}px`;
+      });
+
+      document.querySelectorAll('label').forEach(el => {
+        el.style.fontSize = `${fontSize * 0.875}px`;
+      });
+
+      // Update editable text content
+      document.getElementById('hero-name-text').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('hero-title-text').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-description-text').textContent = config.hero_description || defaultConfig.hero_description;
+      document.getElementById('about-bio-text').textContent = config.about_bio || defaultConfig.about_bio;
+      document.getElementById('footer-copyright-text').textContent = config.footer_copyright || defaultConfig.footer_copyright;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action || defaultConfig.primary_action,
+            set: (value) => {
+              config.primary_action = value;
+              window.elementSdk.setConfig({ primary_action: value });
+            }
+          },
+          {
+            get: () => config.secondary_action || defaultConfig.secondary_action,
+            set: (value) => {
+              config.secondary_action = value;
+              window.elementSdk.setConfig({ secondary_action: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_name", config.hero_name || defaultConfig.hero_name],
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_description", config.hero_description || defaultConfig.hero_description],
+        ["about_bio", config.about_bio || defaultConfig.about_bio],
+        ["footer_copyright", config.footer_copyright || defaultConfig.footer_copyright]
+      ]);
+    }
+
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('formMessage');
+      formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+      formMessage.style.color = window.elementSdk?.config?.primary_action || defaultConfig.primary_action;
+      formMessage.classList.remove('hidden');
+      
+      this.reset();
+      
+      setTimeout(() => {
+        formMessage.classList.add('hidden');
+      }, 5000);
+    });
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9adc0de1442f6e29',t:'MTc2NTY5ODAzOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
